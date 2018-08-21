@@ -4,11 +4,18 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   styleUrls: ['app.component.scss'],
   template: `
-    <div class="app">
-      Hello!
+    <div class='app'>
+      <h1 [innerHTML]='title'></h1>
+      <input type='text' [value]='name'>
     </div>
   `
 })
-export class AppComponent {
 
+export class AppComponent {
+  title: string;
+  name: string = 'Dustin';
+
+  constructor() {
+    this.title = 'Ultimate Angular';
+  }
 }
